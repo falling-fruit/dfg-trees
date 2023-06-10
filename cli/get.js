@@ -27,6 +27,7 @@ const USAGE = [
 let options
 try {
   options = commandLineArgs(OPTIONS)
+  console.log("options: ", options)
   if (options.help) {
     console.log(commandLineUsage(USAGE))
     process.exit(0)
@@ -39,6 +40,7 @@ try {
 
 // Load sources
 const sources = loadSources(
+  console.log("loading sources...")
   `${__dirname}/../sources`,
   { ids: options.ids, countries: options.countries },
   options.dir
@@ -49,6 +51,7 @@ const success = []
 const failure = []
 const skip = []
 async function getSource(source) {
+  console.log("source: ", source)
   try {
     const paths = await source.get(options.force)
     if (paths.length) {
@@ -62,6 +65,7 @@ async function getSource(source) {
   }
 }
 async function get() {
+  console.log("sources: ", sources)
   await Promise.all(sources.map(source => getSource(source)))
   if (success.length) {
     console.log(

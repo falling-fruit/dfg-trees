@@ -29,13 +29,16 @@
     "command-line-usage": "^6.1.0",
     "csv-parser": "^2.3.2",
     "decompress": "^4.2.1",
+    "fast-xml-parser": "^4.2.2",
     "fuzzyset.js": "^1.0.5",
     "gdal-next": "^2.8.0",
     "glob": "^7.1.2",
     "lodash.isequal": "^4.5.0",
     "node-downloader-helper": "^1.0.12",
+    "python-shell": "^5.0.0",
     "replace": "^1.1.5",
-    "table": "^5.4.6"
+    "table": "^5.4.6",
+    "xml2js": "^0.6.0"
   },
   "devDependencies": {
     "jest": "^28.0.0",
